@@ -1,2 +1,3 @@
 # NetWorks
-NetWorks documentation
+
+[Protocol documentation](PROTOCOL.md)
