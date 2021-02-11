@@ -24,12 +24,12 @@ UTF-8-encoded byte[]
 
 ## Message layout
 
-| Type   | Parameter          | Role                                                        |
-|--------|--------------------|-------------------------------------------------------------|
-| `long` | Message ID         | ID of the message to optionally respond to, starting from 1 |
-| `long` | Respond to         | ID of the message to respond to or 0 for not to respond     |
-| `byte` | Command            | Command byte value                                          |
-|        | Command parameters | Command parameters (no break between them)                  |
+| Type   | Parameter          | Role                                                           |
+|--------|--------------------|----------------------------------------------------------------|
+| `long` | Message ID         | ID of the message to optionally respond to, starting from 0    |
+| `long` | Respond to         | ID of the message to respond to or negative for not to respond |
+| `byte` | Command            | Command byte value                                             |
+|        | Command parameters | Command parameters (no break between them)                     |
 
 ## Commands
 
