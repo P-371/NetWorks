@@ -69,9 +69,7 @@ This command must be an answer to a client's connection request.
 
 | Type     | Parameter                 | Role                                                   |
 |----------|---------------------------|--------------------------------------------------------|
-| `int`    | NetWorks major version    | To know what protocol version to use for communication |
-| `int`    | NetWorks minor version    | To know what protocol version to use for communication |
-| `int`    | NetWorks patch version    | To know what protocol version to use for communication |
+| `int`    | NetWorks version          | To know what protocol version to use for communication |
 | `string` | NetWorks application      | To avoid detection other applications using NetWorks   |
 | `string` | NetWorks application data | To send misc. information about the app, like version  |
 
