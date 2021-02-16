@@ -2,7 +2,7 @@
 
 ## Types
 
-### Numbers
+### Integral numbers
 
 | Type    | Size    | Endianness | Signed   | Minimum              | Maximum             |
 |---------|---------|------------|----------|----------------------|---------------------|
@@ -10,6 +10,13 @@
 | `short` | 16 bits | Big        | Signed   | -32768               | 32767               |
 | `int`   | 32 bits | Big        | Signed   | -2147483648          | 2147483647          |
 | `long`  | 64 bits | Big        | Signed   | -9223372036854775808 | 9223372036854775807 |
+
+### Floating point numbers
+
+| Type     | Size    | Endianness | Signed |
+|----------|---------|------------|--------|
+| `float`  | 32 bits | Big        | Signed |
+| `double` | 64 bits | Big        | Signed |
 
 ### Type[]
 
