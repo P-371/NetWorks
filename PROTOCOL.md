@@ -56,7 +56,7 @@ This command is sent through UDP to notify other devices about a NetWorks server
 |----------|---------------------------|--------------------------------------------------------|
 | `int`    | NetWorks version          | To know what protocol version to use for communication |
 | `string` | NetWorks application      | To avoid detection other applications using NetWorks   |
-| `string` | NetWorks application data | To send misc. information about the app, like version  |
+| `string` | NetWorks application info | To information about the application, like version     |
 
 ### Connection request
 
@@ -66,11 +66,11 @@ This command informs the server about an incoming connection request to accept o
 
 This command must be invoked first.
 
-| Type     | Parameter                 | Role                                                   |
-|----------|---------------------------|--------------------------------------------------------|
-| `int`    | NetWorks version          | To know what protocol version to use for communication |
-| `string` | NetWorks application      | To avoid detection other applications using NetWorks   |
-| `string` | NetWorks application data | To send misc. information about the app, like version  |
+| Type     | Parameter        | Role                                                                                           |
+|----------|------------------|------------------------------------------------------------------------------------------------|
+| `int`    | NetWorks version | To know what protocol version to use for communication                                         |
+| `string` | Client name      | Name of the connectng application or device                                                    |
+| `string` | Client info      | Optional information about the client application                                              |
 
 ### Accept connection request
 
@@ -80,11 +80,11 @@ This command informs the client that the connection request was accepted and sen
 
 This command must be an answer to a client's connection request.
 
-| Type     | Parameter                 | Role                                                   |
-|----------|---------------------------|--------------------------------------------------------|
-| `int`    | NetWorks version          | To know what protocol version to use for communication |
-| `string` | NetWorks application      | To avoid detection other applications using NetWorks   |
-| `string` | NetWorks application data | To send misc. information about the app, like version  |
+| Type     | Parameter        | Role                                                                                           |
+|----------|------------------|------------------------------------------------------------------------------------------------|
+| `int`    | NetWorks version | To know what protocol version to use for communication                                         |
+| `string` | Server name      | Name of the connectng application or device                                                    |
+| `string` | Server info      | Optional information about the client application                                              |
 
 ### Reject connection request
 
