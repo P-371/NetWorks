@@ -2,6 +2,8 @@
 
 ## Types
 
+Only the following primitive types are supported:
+
 ### Logical boolean
 
 1 byte. `0` is `false`, everything else (1-255) is `true`
@@ -129,7 +131,7 @@ This command instucts the remote party to invoke a method. The method "short" na
 | Type   | Parameter         | Role                                             |
 |--------|-------------------|--------------------------------------------------|
 | `byte` | Method name       | Short name for a method (for speed optimization) |
-|        | Method parameters | Parameters to pass to that method                |
+|        | Method parameters | Primitive parameters to pass to that method      |
 
 ### Command invocation
 
@@ -137,10 +139,10 @@ Value: `byte` 7
 
 This command instucts the remote party to invoke a method. The method "short" name should be specified explicitly (like method attribute or annotation).
 
-| Type     | Parameter         | Role                              |
-|----------|-------------------|-----------------------------------|
-| `string` | Method name       | Method name to invoke             |
-|          | Method parameters | Parameters to pass to that method |
+| Type     | Parameter         | Role                                        |
+|----------|-------------------|---------------------------------------------|
+| `string` | Method name       | Method name to invoke                       |
+|          | Method parameters | Primitive parameters to pass to that method |
 
 ### Error codes
 
