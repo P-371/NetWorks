@@ -2,6 +2,10 @@
 
 ## Types
 
+### Logical boolean
+
+1 byte. `0` is `false`, everything else (1-255) is `true`
+
 ### Integral numbers
 
 | Type    | Size    | Endianness | Signed   | Minimum              | Maximum             |
