@@ -126,7 +126,7 @@ This command can be an answer to another ping command.
 
 Value: `byte` 6
 
-This command instucts the remote party to invoke a method. The method "short" name should be specified explicitly (like method attribute or annotation).
+This command instucts the remote party to invoke a method and return its result. The method "short" name should be specified explicitly (like method attribute or annotation).
 
 | Type   | Parameter         | Role                                             |
 |--------|-------------------|--------------------------------------------------|
@@ -137,7 +137,7 @@ This command instucts the remote party to invoke a method. The method "short" na
 
 Value: `byte` 7
 
-This command instucts the remote party to invoke a method. The method "short" name should be specified explicitly (like method attribute or annotation).
+This command instucts the remote party to invoke a method and return its result.
 
 | Type     | Parameter         | Role                                        |
 |----------|-------------------|---------------------------------------------|
