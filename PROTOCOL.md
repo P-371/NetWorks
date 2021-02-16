@@ -71,6 +71,7 @@ This command must be invoked first.
 | `int`    | NetWorks version | To know what protocol version to use for communication                                         |
 | `string` | Client name      | Name of the connectng application or device                                                    |
 | `string` | Client info      | Optional information about the client application                                              |
+| `string` | Client token     | To be used during reconnection. The server identifies the client with it after connection loss |
 
 ### Accept connection request
 
@@ -85,6 +86,7 @@ This command must be an answer to a client's connection request.
 | `int`    | NetWorks version | To know what protocol version to use for communication                                         |
 | `string` | Server name      | Name of the connectng application or device                                                    |
 | `string` | Server info      | Optional information about the client application                                              |
+| `string` | Server token     | To be used during reconnection. The server identifies the client with it after connection loss |
 
 ### Reject connection request
 
