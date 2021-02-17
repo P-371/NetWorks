@@ -10,19 +10,19 @@ Only the following primitive types are supported:
 
 ### Integral numbers
 
-| Type    | Size    | Endianness | Signed   | Minimum              | Maximum             |
-|---------|---------|------------|----------|----------------------|---------------------|
-| `byte`  | 8 bits  | -          | Unsigned | 0                    | 255                 |
-| `short` | 16 bits | Big        | Signed   | -32768               | 32767               |
-| `int`   | 32 bits | Big        | Signed   | -2147483648          | 2147483647          |
-| `long`  | 64 bits | Big        | Signed   | -9223372036854775808 | 9223372036854775807 |
+| Type    | Type ID  | Size    | Endianness | Signed   | Minimum              | Maximum             |
+|---------|----------|---------|------------|----------|----------------------|---------------------|
+| `byte`  | `byte` 1 | 8 bits  | -          | Unsigned | 0                    | 255                 |
+| `short` | `byte` 2 | 16 bits | Big        | Signed   | -32768               | 32767               |
+| `int`   | `byte` 3 | 32 bits | Big        | Signed   | -2147483648          | 2147483647          |
+| `long`  | `byte` 4 | 64 bits | Big        | Signed   | -9223372036854775808 | 9223372036854775807 |
 
 ### Floating point numbers
 
-| Type     | Size    | Endianness | Signed |
-|----------|---------|------------|--------|
-| `float`  | 32 bits | Big        | Signed |
-| `double` | 64 bits | Big        | Signed |
+| Type     | Type ID  | Size    | Endianness | Signed |
+|----------|----------|---------|------------|--------|
+| `float`  | `byte` 5 | 32 bits | Big        | Signed |
+| `double` | `byte` 6 | 64 bits | Big        | Signed |
 
 ### Type[]
 
