@@ -164,10 +164,15 @@ Value: `byte` 6
 
 This command instucts the remote party to invoke a method and return its result.
 
-| Type     | Parameter         | Role                                        |
-|----------|-------------------|---------------------------------------------|
-| `string` | Method name       | Method name to invoke                       |
-|          | Method parameters | Primitive parameters to pass to that method |
+| Type       | Parameter         | Role                                |
+|------------|-------------------|-------------------------------------|
+| `string`   | Method name       | Method name to invoke               |
+| `object[]` | Method parameters | Parameters to pass to that method\* |
+
+\* The `object[]` can contain any type of objects.
+
+\* To pass a single array as the only parameter, it is needed to be added inside an `object[]`.
+The `object[]`'s length will be 1 and its only item will be that array.
 
 ### Method invocation success
 
@@ -175,9 +180,11 @@ Value: `byte` 7
 
 This command is sent when a method was successfully invoked.
 
-| Parameter    | Role                                    |
-|--------------|-----------------------------------------|
-| Return value | Optional value returned from the method |
+| Type     | Parameter    | Role                                        |
+|----------|--------------|---------------------------------------------|
+| `object` | Return value | Optional value returned from the method\*\* |
+
+\*\* The object can be any type depending on its type ID.
 
 ### Method invocation failure
 
