@@ -36,12 +36,15 @@
 
 ### Array
 
-| Type   | Parameter    | Value | Role                                                 |
-|--------|--------------|-------|------------------------------------------------------|
-| `byte` | Type ID      | 7     | Type id of array                                     |
-| `byte` | Array type   |       | Type id to identify the array type when reading      |
-| `int`  | Length       |       | Number of items in the array                         |
-|        | Values       |       | Values following each other in their type layout     |
+| Type     | Parameter   | Value | Role                                                          |
+|----------|-------------|-------|---------------------------------------------------------------|
+| `byte`   | Type ID     | 7     | Type id of array                                              |
+| `byte`   | Array type  |       | Type id to identify the array type when reading. \*           |
+| `string` | Object type |       | Type of the object if array type is object, ignored otherwise |
+| `int`    | Length      |       | Number of items in the array                                  |
+|          | Values      |       | Values following each other in their type layout              |
+
+\* Multi-dimensional arrays and jagged arrays are not supported.
 
 ### String
 
@@ -179,11 +182,11 @@ Value: `byte` 7
 
 This command is sent when a method was successfully invoked.
 
-| Type     | Parameter    | Role                                        |
-|----------|--------------|---------------------------------------------|
-| `object` | Return value | Optional value returned from the method\*\* |
+| Type     | Parameter    | Role                                      |
+|----------|--------------|-------------------------------------------|
+| `object` | Return value | Optional value returned from the method\* |
 
-\*\* The object can be any type depending on its type ID.
+\* The object can be any type depending on its type ID.
 
 ### Method invocation failure
 
