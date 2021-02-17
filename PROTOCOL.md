@@ -52,6 +52,22 @@
 | `int`  | Length    |       | Number of bytes in the string                  |
 |        | Value     |       | UTF-8 encoded bytes (not in the byte[] layout) |
 
+### Object (Set, Dictionary)
+
+| Type     | Parameter      | Value | Role                                                |
+|----------|----------------|-------|-----------------------------------------------------|
+| `byte`   | Type ID        | 255   | Type id of object                                   |
+| `string` | Type name      |       | Type full name of the type to identify when reading |
+| `int`    | Property count |       | Number of properties the object has                 |
+|          | Properties     |       | Properties following each other in property layout  |
+
+### Property
+
+| Type     | Parameter     | Role                                                       |
+|----------|---------------|------------------------------------------------------------|
+| `string` | Property name | Identify the property                                      |
+| `byte`   | Type ID       | Type id to identify the property value type when reading   |
+|          | Value         | Property values following each other in their type layout  |
 
 ## Message layout
 
