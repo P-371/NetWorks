@@ -40,7 +40,6 @@
 |--------|--------------|-------|------------------------------------------------------|
 | `byte` | Type ID      | 7     | Type id of array                                     |
 | `byte` | Array type   |       | Type id to identify the array type when reading      |
-| `byte` | Item type    |       | Type id to identify the array item type when reading |
 | `int`  | Length       |       | Number of items in the array                         |
 |        | Values       |       | Values following each other in their type layout     |
 
