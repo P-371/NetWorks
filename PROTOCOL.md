@@ -135,6 +135,27 @@ This command instucts the remote party to invoke a method and return its result.
 | `string` | Method name       | Method name to invoke                       |
 |          | Method parameters | Primitive parameters to pass to that method |
 
+### Method invocation success
+
+Value: `byte` 7
+
+This command is sent when a method was successfully invoked.
+
+| Parameter    | Role                                    |
+|--------------|-----------------------------------------|
+| Return value | Optional value returned from the method |
+
+### Method invocation failure
+
+Value: `byte` 8
+
+This command is sent when a method could not be invoked.
+
+| Type     | Parameter         | Role                                        |
+|----------|-------------------|---------------------------------------------|
+| `byte`   | Error code        | Error code (why couldn't be invoked)        |
+| `string` | Error message     | Detailed information about what happened    |
+
 ### Error codes
 
 | Value    | Meaning                                                             |
@@ -146,3 +167,5 @@ This command instucts the remote party to invoke a method and return its result.
 | `byte` 4 | An unknown command was received (see [commands](#commands))         |
 | `byte` 5 | Unexpected command (the command is valid but unexpected)            |
 | `byte` 6 | Unexpected parameter (the command is valid, but a parameter is not) |
+| `byte` 7 | No method was found to be invoked                                   |
+| `byte` 8 | An exception occured in the invocation of the method                |
