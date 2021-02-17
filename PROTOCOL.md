@@ -1,8 +1,6 @@
 # NetWorks protocol version 1 draft
 
-## Types
-
-Only the following primitive types are supported:
+## Primitive types
 
 ### Logical boolean
 
@@ -27,16 +25,33 @@ Only the following primitive types are supported:
 | `float`  | `byte` 5 | 32 bits | Big        | Signed |
 | `double` | `byte` 6 | 64 bits | Big        | Signed |
 
-### Type[]
+## Type layout
 
-| Type   | What                         |
-|--------|------------------------------|
-| `int`  | Array length                 |
-| `Type` | Nth item, array length times |
+### Primitives
+
+| Type   | Parameter | Role                                        |
+|--------|-----------|---------------------------------------------|
+| `byte` | Type ID   | Type id to identify the type when reading   |
+|        | Value     | What should I say? The role is obvious here |
+
+### Array
+
+| Type   | Parameter    | Value | Role                                                 |
+|--------|--------------|-------|------------------------------------------------------|
+| `byte` | Type ID      | 7     | Type id of array                                     |
+| `byte` | Array type   |       | Type id to identify the array type when reading      |
+| `byte` | Item type    |       | Type id to identify the array item type when reading |
+| `int`  | Length       |       | Number of items in the array                         |
+|        | Values       |       | Values following each other in their type layout     |
 
 ### String
 
-UTF-8-encoded byte[]
+| Type   | Parameter | Value | Role                                           |
+|--------|-----------|-------|------------------------------------------------|
+| `byte` | Type ID   | 8     | Type id of string                              |
+| `int`  | Length    |       | Number of bytes in the string                  |
+|        | Value     |       | UTF-8 encoded bytes (not in the byte[] layout) |
+
 
 ## Message layout
 
