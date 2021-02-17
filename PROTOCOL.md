@@ -199,14 +199,16 @@ This command is sent when a method could not be invoked.
 
 ### Error codes
 
-| Value    | Meaning                                                             |
-|----------|---------------------------------------------------------------------|
-| `byte` 0 | Success                                                             |
-| `byte` 1 | Not connected. A connection must be requested and accepted first    |
-| `byte` 2 | This happened or was initiated by the user                          |
-| `byte` 3 | Not supported                                                       |
-| `byte` 4 | An unknown command was received (see [commands](#commands))         |
-| `byte` 5 | Unexpected command (the command is valid but unexpected)            |
-| `byte` 6 | Unexpected parameter (the command is valid, but a parameter is not) |
-| `byte` 7 | No method was found to be invoked                                   |
-| `byte` 8 | An exception occured in the invocation of the method                |
+| Value     | Meaning                                                              |
+|-----------|----------------------------------------------------------------------|
+| `byte` 0  | Success                                                              |
+| `byte` 1  | Not connected. A connection must be requested and accepted first     |
+| `byte` 2  | This happened or was initiated by the user                           |
+| `byte` 3  | Not supported                                                        |
+| `byte` 4  | An unknown command was received (see [commands](#commands))          |
+| `byte` 5  | Unexpected command (the command is valid but unexpected)             |
+| `byte` 6  | Unexpected parameter (the command is valid, but a parameter is not)  |
+| `byte` 7  | No method was found to be invoked                                    |
+| `byte` 8  | An exception occured in the invocation of the method                 |
+| `byte` 9  | Cannot (de)serialize an object                                       |
+| `byte` 10 | A method invocation or (de)serialization failed for security reasons |
