@@ -54,12 +54,12 @@
 
 ### Object (Set, Dictionary)
 
-| Type     | Parameter      | Value | Role                                                |
-|----------|----------------|-------|-----------------------------------------------------|
-| `byte`   | Type ID        | 255   | Type id of object                                   |
-| `string` | Type name      |       | Type full name of the type to identify when reading |
-| `int`    | Property count |       | Number of properties the object has                 |
-|          | Properties     |       | Properties following each other in property layout  |
+| Type     | Parameter      | Value | Role                                               |
+|----------|----------------|-------|----------------------------------------------------|
+| `byte`   | Type ID        | 255   | Type id of object                                  |
+| `string` | Type name      |       | Type name of the type to identify when reading     |
+| `int`    | Property count |       | Number of properties the object has                |
+|          | Properties     |       | Properties following each other in property layout |
 
 ### Property
 
