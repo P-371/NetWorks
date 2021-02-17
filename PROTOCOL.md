@@ -6,7 +6,10 @@ Only the following primitive types are supported:
 
 ### Logical boolean
 
-1 byte. `0` is `false`, everything else (1-255) is `true`
+| Type   | Type ID  | Size    | Endianness | Signed   | Value   | Range |
+|--------|----------|---------|------------|----------|---------|-------|
+| `byte` | `byte` 0 | 8 bits  | -          | Unsigned | `false` | 0     |
+| `byte` | `byte` 0 | 8 bits  | -          | Unsigned | `true`  | 1-255 |
 
 ### Integral numbers
 
