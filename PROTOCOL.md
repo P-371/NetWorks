@@ -124,20 +124,9 @@ This command can be an answer to another ping command.
 |----------|-----------|------------------------------------------------|
 | `long`   | Time      | Milliseconds sinch the Unix epoch (1970-01-01) |
 
-### Quick command invocation
+### Method invocation
 
 Value: `byte` 6
-
-This command instucts the remote party to invoke a method and return its result. The method "short" name should be specified explicitly (like method attribute or annotation).
-
-| Type   | Parameter         | Role                                             |
-|--------|-------------------|--------------------------------------------------|
-| `byte` | Method name       | Short name for a method (for speed optimization) |
-|        | Method parameters | Primitive parameters to pass to that method      |
-
-### Command invocation
-
-Value: `byte` 7
 
 This command instucts the remote party to invoke a method and return its result.
 
